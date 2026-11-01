@@ -1,0 +1,160 @@
+/* PhishGuard Cybersecurity Theme & Custom FX */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --bg-dark: #070B14;
+    --card-dark: #0E1626;
+    --card-border: #1E293B;
+    --cyan-glow: #06B6D4;
+    --emerald-glow: #10B981;
+    --crimson-glow: #EF4444;
+    --amber-glow: #F59E0B;
+}
+
+body {
+    background-color: var(--bg-dark);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #E2E8F0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Cyber Grid Background */
+.cyber-grid {
+    background-size: 40px 40px;
+    background-image: 
+        linear-gradient(to right, rgba(30, 41, 59, 0.25) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(30, 41, 59, 0.25) 1px, transparent 1px);
+}
+
+/* Ambient Radial Glows */
+.ambient-glow-cyan {
+    background: radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.12) 0%, transparent 60%);
+}
+
+.ambient-glow-crimson {
+    background: radial-gradient(circle at 80% 20%, rgba(239, 68, 68, 0.08) 0%, transparent 50%);
+}
+
+/* Glassmorphism Cards */
+.glass-panel {
+    background: rgba(14, 22, 38, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(51, 65, 85, 0.6);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+}
+
+.glass-panel-glow {
+    border-color: rgba(6, 182, 212, 0.35);
+    box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.15);
+}
+
+.glass-panel-danger {
+    border-color: rgba(239, 68, 68, 0.4);
+    box-shadow: 0 0 30px -5px rgba(239, 68, 68, 0.2);
+}
+
+.glass-panel-safe {
+    border-color: rgba(16, 185, 129, 0.4);
+    box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.2);
+}
+
+/* Pulsing radar scan effect */
+@keyframes radar-sweep {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.radar-spinner {
+    animation: radar-sweep 4s linear infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
+
+.pulse-glow-effect {
+    animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0B1120;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1E293B;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}
+
+/* Highlighted threat token inside SMS */
+.threat-highlight {
+    background: rgba(239, 68, 68, 0.25);
+    border-bottom: 2px dashed #EF4444;
+    color: #FCA5A5;
+    padding: 1px 4px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.link-highlight {
+    background: rgba(6, 182, 212, 0.2);
+    border-bottom: 2px solid #06B6D4;
+    color: #67E8F9;
+    padding: 1px 4px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85em;
+}
+
+/* Scan Line Animation */
+@keyframes scanline {
+    0% {
+        top: 0%;
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        opacity: 0.2;
+    }
+}
+
+.cyber-scanline {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #06B6D4, #3B82F6, transparent);
+    box-shadow: 0 0 15px #06B6D4;
+    animation: scanline 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishGuard – Intelligent Phishing URL & SMS Detector</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            dark: '#070B14',
+                            card: '#0E1626',
+                            border: '#1E293B',
+                            cyan: '#06B6D4',
+                            emerald: '#10B981',
+                            crimson: '#EF4444',
+                            amber: '#F59E0B'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Chart.js for Analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- React & ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- Babel for in-browser JSX parsing -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Custom Cyber Styles -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2306B6D4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg>">
+</head>
+<body class="bg-[#070B14] text-slate-100 cyber-grid min-h-screen flex flex-col selection:bg-cyan-500 selection:text-black">
+    <div id="root" class="flex-1 flex flex-col">
+        <!-- Loading Placeholder while React boots -->
+        <div class="flex-1 flex flex-col items-center justify-center p-8 text-center">
+            <div class="relative w-16 h-16 mb-4">
+                <div class="absolute inset-0 rounded-full border-2 border-cyan-500/20 border-t-cyan-400 animate-spin"></div>
+                <div class="absolute inset-3 rounded-full border-2 border-crimson-500/30 border-b-cyan-300 animate-pulse"></div>
+            </div>
+            <h2 class="text-xl font-bold tracking-wider text-cyan-400 font-mono">INITIALIZING PHISHGUARD</h2>
+            <p class="text-sm text-slate-400 mt-2 font-mono">Loading Neural Feature Extractors & Machine Learning Models...</p>
+        </div>
+    </div>
+
+    <!-- Application Script -->
+    <script type="text/babel" src="/static/js/app.js"></script>
+</body>
+</html>
+

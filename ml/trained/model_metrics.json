@@ -1,0 +1,114 @@
+{
+  "url_models": {
+    "best_model": "Random Forest",
+    "benchmarks": {
+      "Random Forest": {
+        "accuracy": 100.0,
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1_score": 100.0,
+        "cv_mean": 90.92,
+        "confusion_matrix": [
+          [
+            23,
+            0
+          ],
+          [
+            0,
+            24
+          ]
+        ]
+      },
+      "Logistic Regression": {
+        "accuracy": 95.74,
+        "precision": 95.83,
+        "recall": 95.83,
+        "f1_score": 95.83,
+        "cv_mean": 88.39,
+        "confusion_matrix": [
+          [
+            22,
+            1
+          ],
+          [
+            1,
+            23
+          ]
+        ]
+      },
+      "Support Vector Machine (SVM)": {
+        "accuracy": 97.87,
+        "precision": 96.0,
+        "recall": 100.0,
+        "f1_score": 97.96,
+        "cv_mean": 92.24,
+        "confusion_matrix": [
+          [
+            22,
+            1
+          ],
+          [
+            0,
+            24
+          ]
+        ]
+      }
+    }
+  },
+  "sms_models": {
+    "best_model": "Random Forest",
+    "benchmarks": {
+      "Random Forest": {
+        "accuracy": 100.0,
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1_score": 100.0,
+        "cv_mean": 77.8,
+        "confusion_matrix": [
+          [
+            7,
+            0
+          ],
+          [
+            0,
+            8
+          ]
+        ]
+      },
+      "Logistic Regression": {
+        "accuracy": 86.67,
+        "precision": 80.0,
+        "recall": 100.0,
+        "f1_score": 88.89,
+        "cv_mean": 89.79,
+        "confusion_matrix": [
+          [
+            5,
+            2
+          ],
+          [
+            0,
+            8
+          ]
+        ]
+      },
+      "Support Vector Machine (SVM)": {
+        "accuracy": 86.67,
+        "precision": 80.0,
+        "recall": 100.0,
+        "f1_score": 88.89,
+        "cv_mean": 88.07,
+        "confusion_matrix": [
+          [
+            5,
+            2
+          ],
+          [
+            0,
+            8
+          ]
+        ]
+      }
+    }
+  }
+}
